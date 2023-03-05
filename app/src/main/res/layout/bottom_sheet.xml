@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@drawable/background_round"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:fontFamily="@font/inter"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_name_want_save_record"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/filenameInput"
+            style="@style/EditTextHint"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_white_rounded"
+            android:layout_height="70dp"
+            android:layout_margin="16dp"
+            android:hint="@string/title_entry_name_audio_note"
+            android:padding="16dp"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="80dp"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancel"
+            style="@style/ButtonBottomSheet"
+            android:text="@string/button_cancel_record"
+            android:layout_marginEnd="20dp"
+            app:cornerRadius="26dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSave"
+            style="@style/ButtonBottomSheet"
+            android:text="@string/button_save_record" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

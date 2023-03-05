@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/layoutTest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="50dp">
+
+
+            <android.widget.SearchView
+                android:id="@+id/searchAudioNote"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_white_rounded"
+                android:textColorHint ="@color/white"
+                android:backgroundTint="@color/white"
+                android:layout_marginBottom="25dp"
+                android:iconifiedByDefault="false"
+                android:queryHint="Поиск..." />
+
+            <TextView
+                android:id="@+id/titleAllNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginBottom="25dp"
+                android:text="@string/title_all_audio_note"/>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/listNoteAudio"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/audio_note_item"
+                        android:adjustViewBounds="true"/>
+
+
+                    <TextView
+                        android:id="@+id/tvDurationRecord"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:visibility="gone"
+                        android:text="@string/title_create_record"
+                        android:textSize="30sp"
+                        android:fontFamily="@font/inter"/>
+
+                    <ImageView
+                        android:id="@+id/tvImageListIsEmpty"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:src="@mipmap/icon_note_list_is_empty"/>
+
+                    <TextView
+                        android:id="@+id/tvTitleListIsEmpty"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:visibility="gone"
+                        android:text="@string/title_list_is_empty"/>
+
+                    <ImageButton
+                        android:id="@+id/recordAudioNote"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/round_button"
+                        android:src="@mipmap/icon_micro"
+                        app:tint="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/bottomSheetBG"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/opaqueBG" />
+
+    <include layout="@layout/bottom_sheet"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

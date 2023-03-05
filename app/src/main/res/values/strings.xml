@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SignIn</string>
+    <integer name="com_vk_sdk_AppId">51567338</integer>
+
+
+
+
+
+
+    <string name="title_name_mobile">Аудио Заметочки</string>
+    <string name="title_sign_in_not_auto">Войти без авторизаций</string>
+    <string name="title_sign_in_vk">Войти через ВК</string>
+    <string name="title_all_audio_note">Все записи</string>
+    <string name="title_create_record">Идёт запись \\n Удерживайте кнопку для записи</string>
+    <string name="title_list_is_empty">Создайте свою первую запись с помощью кнопочки</string>
+    <string name="title_name_audio_note">Название аудио заметки</string>
+    <string name="title_name_date_create">Дата создания заметки</string>
+    <string name="duration_audio_note">00:00/00:00</string>
+    <string name="button_cancel_record">Отмена</string>
+    <string name="button_save_record">Сохранить</string>
+    <string name="title_name_want_save_record">Сохранить аудио-заметку ?</string>
+    <string name="title_entry_name_audio_note">Название аудио-заметки</string>
+
+</resources>
